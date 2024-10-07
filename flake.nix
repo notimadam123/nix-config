@@ -46,10 +46,27 @@
     ];
   in {
     nixosConfigurations = {
-      tjd = nixpkgs.lib.nixosSystem {
+      desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./hosts/tjd/configuration.nix
+          ./hosts/desktop/configuration.nix
+          ./hosts/desktop/home.nix
+        ];
+      };
+
+      server = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/server/configuration.nix
+          ./hosts/server/home.nix
+        ];
+      };
+
+      laptop = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/laptop/configuration.nix
+          ./hosts/laptop/home.nix
         ];
       };
     };
