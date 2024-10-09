@@ -3,7 +3,7 @@
     hostname = "tfd";
     username = "ye";
     homeDirectory = "/home/" + config.var.username;
-    configDirectory = config.var.homeDirectory + "/.config/nix";
+    configDirectory = "/home/" + config.var.username + "/.config/nix";
 
     keyboardLayout = "uk";
 
