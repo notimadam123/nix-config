@@ -3,7 +3,8 @@
   config = {
     keyboardLayout = "uk";
     timeZone = "Europe/London";
-    defaultLocale = "en_US.UTF-8";
-    extraLocale = "en_GB.UTF-8";
-  };
-}
+      i18n = {
+        defaultLocale = "en_GB.UTF-8";
+      };
+    };
+  }
