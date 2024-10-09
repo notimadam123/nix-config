@@ -3,7 +3,7 @@
   networking.hostName = config.var.hostname;
 
   services = {
-    xserver {
+    xserver = {
       enable = true;
       xkb.layout = config.var.keyboardLayout;
       xkb.variant = "";
@@ -44,6 +44,4 @@
     curl
     fastfetch
   ];
-  
-  
 }
