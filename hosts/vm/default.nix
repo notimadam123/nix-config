@@ -1,6 +1,6 @@
 { pkgs, config, lib, ... }: 
 {
-  networking.hostName = tpd;
+  networking.hostName = "tpd";
   imports = [
     ./hardware-configuration.nix
     ./../../modules/nixos
