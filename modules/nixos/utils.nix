@@ -1,7 +1,5 @@
 { pkgs, config, ... }: {
 
-  networking.hostName = config.var.hostname;
-
   services = {
     xserver = {
       enable = true;
