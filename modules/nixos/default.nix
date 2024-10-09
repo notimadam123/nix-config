@@ -14,5 +14,6 @@
     ./timezone.nix      
     ./users.nix
     ./virtualization.nix
+    ./variables.nix
   ];
 }
