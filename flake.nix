@@ -3,9 +3,7 @@
 
   inputs = {
 
-    nixpkgs.url = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     hyprland.url = "github:hyprwm/Hyprland";
     split-monitor-workspaces = {
@@ -43,11 +41,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    chaotic.url = "github:chaotic-cx/nyx/nixpkgs-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     
-    ags.url = "github:Aylur.ags";
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = {
@@ -84,6 +82,13 @@
         modules = [
           ./hosts/laptop/configuration.nix
           ./hosts/laptop/home.nix
+        ];
+      };
+      vm = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/vm/default.nix
+          ./hosts/vm/home.nix
         ];
       };
     };
