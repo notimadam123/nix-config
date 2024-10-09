@@ -6,18 +6,18 @@
     useGlobalPkgs = true;
     extraSpecialArgs = { inherit inputs username host; };
     users.${username} = {
-      home.username = "${username}";
-      home.homeDirectory = "/home/${username}";
+      home.username = "${config.var.username}";
+      home.homeDirectory = "/home/${config.var.username}";
       home.stateVersion = "24.11";
       programs.home-manager.enable = true;
     };
   };
 
-  users.users.${username} = {
+  users.users.${config.var.username} = {
     isNormalUser = true;
-    description = "${username}";
+    description = "${config.var.username}";
     extraGroups = [ "libvirt" "networkmanager" "wheel" "plugdev" ];
     shell = pkgs.fish;
   };
-  nix.settings.allowed-users = [ "${username}" ];
+  nix.settings.allowed-users = [ "${config.var.username}" ];
 }
