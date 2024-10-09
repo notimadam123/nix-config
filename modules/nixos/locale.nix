@@ -1,6 +1,6 @@
 { config, ... }: {
 
-  config.var = {
+  config = {
     keyboardLayout = "uk";
     location = "Belfast";
     timeZone = "Europe/London";
