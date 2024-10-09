@@ -11,7 +11,6 @@
     ./locale.nix
     ./fonts.nix    
     ./nix.nix
-    ./timezone.nix      
     ./users.nix
     ./virtualization.nix
   ];
