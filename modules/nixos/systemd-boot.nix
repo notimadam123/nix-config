@@ -6,6 +6,5 @@
       consoleMode = "auto";
     };
     tmp.cleanOnBoot = true;
-    kernelPackages = pkgs.linuxPackages_cachyos;
    };
   }
