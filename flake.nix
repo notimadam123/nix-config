@@ -1,5 +1,5 @@
 {
-  description = "hyprland nix config"
+  description = "hyprland nix config";
 
   inputs = {
 
