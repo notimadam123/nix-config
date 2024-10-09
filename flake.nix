@@ -2,7 +2,10 @@
   description = "hyprland nix config"
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    nixpkgs.url = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
 
     hyprland.url = "github:hyprwm/Hyprland";
     split-monitor-workspaces = {
@@ -84,6 +87,6 @@
         ];
       };
     };
-   }
-  }
-};
+   };
+  };
+}
