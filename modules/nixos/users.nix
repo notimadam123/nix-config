@@ -1,24 +1,11 @@
-{ config, pkgs, inputs, username, host, ...}:
-let username = config.var.username;
-in {
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    extraSpecialArgs = { inherit inputs username host; };
-    users.${username} = {
-      home.username = "${username}";
-      home.homeDirectory = "/home/${username}";
-      home.stateVersion = "24.11";
-      programs.home-manager.enable = true;
-    };
-  };
+{ pkgs, ... }:
 
-  users.users.${config.var.username} = {
+{
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.ye = {
     isNormalUser = true;
-    description = "${config.var.username}";
-    extraGroups = [ "libvirt" "networkmanager" "wheel" "plugdev" ];
+    description = "ye";
+    extraGroups = [ "libvirt" "networkmanager" "input" "wheel" "video" "audio" "tss" ];
     shell = pkgs.fish;
   };
-  nix.settings.allowed-users = [ "${username}" ];
 }

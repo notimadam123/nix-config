@@ -8,12 +8,11 @@
     ./usb.nix    
     ./utils.nix
     ./bluetooth.nix  
+    ./locale.nix
     ./fonts.nix    
-#   ./home-manager.nix  
     ./nix.nix
     ./timezone.nix      
     ./users.nix
     ./virtualization.nix
-    ./variables.nix
   ];
 }
