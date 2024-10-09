@@ -5,6 +5,7 @@
     ./gvfs.nix          
     ./network-manager.nix  
     ./systemd-boot.nix  
+    ./kernel.nix
     ./usb.nix    
     ./utils.nix
     ./bluetooth.nix  
