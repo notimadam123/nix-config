@@ -1,4 +1,4 @@
-{ config, var, ... }: {
+{ config, var, username, ... }: {
   config.var = {
     hostname = "tfd";
     username = "ye";
