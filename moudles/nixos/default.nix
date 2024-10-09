@@ -9,7 +9,7 @@
     ./utils.nix
     ./bluetooth.nix  
     ./fonts.nix    
-    ./home-manager.nix  
+#   ./home-manager.nix  
     ./nix.nix
     ./timezone.nix      
     ./users.nix
