@@ -5,8 +5,7 @@
   services = {
     xserver = {
       enable = true;
-      xkb.layout = config.var.keyboardLayout;
-      xkb.variant = "";
+      xkb.layout = "uk";
     };
     gnome.gnome-keyring.enable = true;
   };
