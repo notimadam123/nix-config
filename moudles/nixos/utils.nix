@@ -34,7 +34,7 @@
     nixos.enable = false;
   };
 
-  environment.systemPacksges = with pkgs;[
+  environment.systemPackages = with pkgs;[
     fd
     bc
     gcc
