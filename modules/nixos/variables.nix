@@ -1,23 +1,22 @@
-{ config, var, username, ... }: {
+{ config, ... }: {
+
   config.var = {
-    hostname = "tfd";
-    username = "ye";
-    homeDirectory = "/home/" + config.var.username;
-    configDirectory = "/home/" + config.var.username + "/.config/nix";
+    username = "tpd";
+    configDirectory = "/home/" + config.var.username + "/.config/nixos";
 
     keyboardLayout = "uk";
 
-    location = "London";
+    location = "Belfast";
     timeZone = "Europe/London";
     defaultLocale = "en_US.UTF-8";
     extraLocale = "en_GB.UTF-8";
 
     git = {
       username = "notimadam123";
-#TODO
+      email = "171095855+notimadam123@users.noreply.github.com";
     };
 
-    sops = true;
-
+    autoUpgrade = false;
+    autoGarbageCollector = false;
   };
 }
