@@ -1,6 +1,4 @@
 { config, ... }: {
-  imports = [ ../modules/variables-config.nix ];
-
   config.var = {
     hostname = "tfd";
     username = "ye";
