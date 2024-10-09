@@ -32,6 +32,7 @@
   };
 
   environment.systemPackages = with pkgs;[
+    linuxPackages.cachyos
     fd
     bc
     gcc
