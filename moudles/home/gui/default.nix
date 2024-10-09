@@ -15,7 +15,9 @@
     wl-clipboard
   ];
   imports = [
-  # TODO
+    ./colors.nix
+    ./gtk.nix
+    ./hyprland.nix
   ];
 
   programs = {

@@ -60,35 +60,31 @@
     "x86_64-linux"
     ];
   in {
-    nixosConfigurations = {
+    nixosConfigurations= {
       desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./hosts/desktop/configuration.nix
-          ./hosts/desktop/home.nix
+          ./hosts/desktop/default.nix
         ];
       };
 
       server = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./hosts/server/configuration.nix
-          ./hosts/server/home.nix
+          ./hosts/server/default.nix
         ];
       };
 
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          ./hosts/laptop/configuration.nix
-          ./hosts/laptop/home.nix
+          ./hosts/laptop/default.nix
         ];
       };
       vm = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/vm/default.nix
-          ./hosts/vm/home.nix
         ];
       };
     };
