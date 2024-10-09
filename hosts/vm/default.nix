@@ -2,7 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./../../moudles/nixos
+    ./../../modules/nixos
   ];
 
   services.openssh = {
