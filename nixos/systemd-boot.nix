@@ -7,6 +7,6 @@
     };
     tmp.cleanOnBoot = true;
     kernelPackages =
-      pkgs.linuxPackages_zen;
+      pkgs.linuxPackages_cachyos;
    };
   }
