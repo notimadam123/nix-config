@@ -84,9 +84,8 @@
       vm = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          disko.nixosModules.disko
           ./hosts/vm/default.nix
-          ./hosts/vm/disko.nix
+          ./hosts/vm/disko-config.nix
         ];
       };
     };

@@ -4,7 +4,8 @@
   imports = [
     ./hardware-configuration.nix
     ./../../modules/nixos
-    ./disko.nix
+    ./disko-config.nix
+    inputs.disko.nixosModules.disko
   ];
 
   services.openssh = {
