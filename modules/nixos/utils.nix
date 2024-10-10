@@ -17,6 +17,7 @@
 
   services.libinput.enable = true;
   programs.dconf.enable = true;
+  programs.fish.enable = true;
   services = {
     dbus.enable = true;
     upower.enable = true;
@@ -32,6 +33,7 @@
   };
 
   environment.systemPackages = with pkgs;[
+    fish
     linuxPackages.cachyos
     fd
     bc
