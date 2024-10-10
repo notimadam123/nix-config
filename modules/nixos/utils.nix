@@ -7,7 +7,7 @@
     };
     gnome.gnome-keyring.enable = true;
   };
-  console.keyMap = uk;
+  console.keyMap = "uk";
 
   environment.variables = {
     XDG_DATA_HOME = "$HOME/.local/share";
