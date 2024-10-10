@@ -34,7 +34,6 @@
 
   environment.systemPackages = with pkgs;[
     fish
-    linuxPackages.cachyos
     fd
     bc
     gcc
