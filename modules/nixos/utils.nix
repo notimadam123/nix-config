@@ -7,7 +7,7 @@
     };
     gnome.gnome-keyring.enable = true;
   };
-  console.keyMap = config.var.keyboardLayout;
+  console.keyMap = uk;
 
   environment.variables = {
     XDG_DATA_HOME = "$HOME/.local/share";
