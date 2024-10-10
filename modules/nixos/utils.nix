@@ -3,7 +3,7 @@
   services = {
     xserver = {
       enable = true;
-      xkb.layout = "uk";
+      xkb.layout = "gb";
     };
     gnome.gnome-keyring.enable = true;
   };
