@@ -85,6 +85,7 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/vm/default.nix
+          ./hosts/vm/disko.nix
         ];
       };
     };
